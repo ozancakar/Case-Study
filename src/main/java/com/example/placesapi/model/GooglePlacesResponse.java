@@ -1,35 +1,43 @@
+/*
+*
+*   Google API den gelen sonuçları alıyoruz.
+*
+* */
+
 package com.example.placesapi.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class GooglePlacesResponse {
-    private List<Places> results;
+    private List<Places> results; // Google Places API'den dönen sonuçlar
 
-    // Constructor
+
     public GooglePlacesResponse() {
-        this.results = new ArrayList<>();
+        this.results = new ArrayList<>(); // Sonuçlar listesini başlat
     }
 
+
     public GooglePlacesResponse(List<Places> results) {
+
         this.results = results != null ? results : new ArrayList<>();
     }
 
-    // Getter
+
     public List<Places> getResults() {
         return results;
     }
 
-    // Setter
+
     public void setResults(List<Places> results) {
         this.results = results != null ? results : new ArrayList<>();
     }
 
-    // toString Metodu
+
     @Override
     public String toString() {
         return "GooglePlacesResponse{" +
-                "results=" + results +
+                "results=" + results + // results listesini string olarak döner
                 '}';
     }
 }
