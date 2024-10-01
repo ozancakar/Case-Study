@@ -1,1 +1,1 @@
-git config --global core.autocrlf true  # Windows için
+git config --global core.autocrlf true  # Windows için 
