@@ -22,7 +22,7 @@ public class PlacesService {
 
     private final PlacesRepository placesRepository; // PlacesRepository bağımlılığı
 
-    @Value("${google.api.key}")
+    @Value("${google.places.api.key}")
     private String apiKey;
 
     // Constructor
