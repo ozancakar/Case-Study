@@ -3,10 +3,10 @@ import axios from 'axios';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 
 const App = () => {
-  const [longitude, setLongitude] = useState('');
-  const [latitude, setLatitude] = useState('');
-  const [radius, setRadius] = useState('');
-  const [places, setPlaces] = useState([]);
+  const [longitude, setLongitude] = useState(''); // Boylam
+  const [latitude, setLatitude] = useState(''); // Enlem
+  const [radius, setRadius] = useState(''); // Yarıcap
+  const [places, setPlaces] = useState([]); // Yer 
 
   // Google Maps API yükleme
   const { isLoaded } = useLoadScript({
