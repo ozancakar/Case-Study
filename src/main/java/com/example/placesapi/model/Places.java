@@ -1,44 +1,50 @@
+/*
+*
+*   Veri Modellemesi
+*
+* */
+
+
 package com.example.placesapi.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.Entity; // JPA için Entity anotasyonunu import et
+import jakarta.persistence.GeneratedValue; // Değerin otomatik üretilmesi için
+import jakarta.persistence.GenerationType; // Üretim stratejisi türü için
+import jakarta.persistence.Id; // Entity için ID anotasyonunu import et
 
 @Entity
 public class Places {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Id // Bu alanın birincil anahtar olduğunu belirtir
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // ID'nin otomatik olarak üretilmesini sağlar
+    private Long id; // Yer kaydı için benzersiz kimlik
 
-    private String name;
-    private double latitude;
-    private double longitude;
+    private String name; // Yer ismi
+    private double latitude; // Enlem
+    private double longitude; // Boylam
 
     // Yeni radius alanı
-    private double radius;
+    private double radius; // Yerin yarıçapı (örn. etrafındaki etki alanı)
 
-    // Default Constructor
+    // Varsayılan constructor
     public Places() {
     }
 
-    // Parameterized Constructor
+    // Parametreli constructor
     public Places(String name, double latitude, double longitude, double radius) {
-        this.name = name;
-
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.radius = radius;
+        this.name = name; // Yer ismini ayarla
+        this.latitude = latitude; // Enlemi ayarla
+        this.longitude = longitude; // Boylamı ayarla
+        this.radius = radius; // Yarıçapı ayarla
     }
 
     // Getters ve Setters
     public Long getId() {
-        return id;
+        return id; // ID değerini döner
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.id = id; // ID değerini ayarlar
     }
 
     public String getName() {
@@ -48,7 +54,6 @@ public class Places {
     public void setName(String name) {
         this.name = name;
     }
-
 
     public double getLatitude() {
         return latitude;
@@ -74,14 +79,15 @@ public class Places {
         this.radius = radius;
     }
 
+
     @Override
     public String toString() {
         return "Places{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                ", radius=" + radius +
+                "id=" + id + // ID bilgisi
+                ", name='" + name + '\'' + // Yer ismi
+                ", latitude=" + latitude + // Enlem bilgisi
+                ", longitude=" + longitude + // Boylam bilgisi
+                ", radius=" + radius + // Yarıçap bilgisi
                 '}';
     }
 }
