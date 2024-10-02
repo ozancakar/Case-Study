@@ -1,6 +1,7 @@
 {
   "name": "google-places-app",
   "version": "0.1.0",
+  "proxy": "https://rare-study-436922-m7.ew.r.appspot.com",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
