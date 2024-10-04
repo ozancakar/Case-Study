@@ -5,6 +5,6 @@ Bu proje, enlem, boylam ve yarıçap bilgilerini alarak yakınlardaki yerleri li
 ## Teknolojiler:
 - Java 8+
 - Spring Boot
-- PostgreSQL
+- H2 Database
 - React.js
 - Google Maps API
